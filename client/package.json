@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "zustand": "^4.5.2"
@@ -20,7 +21,7 @@
     "eject": "react-scripts eject",
     "client": "pnpm workspace client start",
     "client:build": "pnpm workspace client react-scripts build",
-    "serVer": "pnpm workspace server start"
+    "server": "pnpm workspace server start"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +46,7 @@
     "server"
   ],
   "devDependencies": {
-    "typescript": "^5.4.2"
+    "tailwindcss": "^3.4.1",
+    "typescript": "4"
   }
 }
