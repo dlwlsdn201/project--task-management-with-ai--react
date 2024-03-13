@@ -18,7 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
+    "coverage": "jest --coverage",
     "eject": "react-scripts eject",
     "client": "pnpm workspace client start",
     "client:build": "pnpm workspace client react-scripts build",
@@ -47,10 +48,22 @@
     "server"
   ],
   "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/plugin-syntax-jsx": "^7.23.3",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-typescript": "^7.23.3",
     "@testing-library/react": "^13.4.0",
+    "@types/jest": "^29.5.12",
+    "babel-jest": "^29.7.0",
     "daisyui": "^4.7.3",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-plugin-jest": "^27.9.0",
     "jest-environment-jsdom": "^29.7.0",
+    "prettier": "3.2.5",
     "tailwindcss": "^3.4.1",
+    "ts-jest": "^29.1.2",
     "typescript": "4"
   }
 }
