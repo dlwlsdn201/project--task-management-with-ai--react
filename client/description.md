@@ -76,13 +76,27 @@ module.exports = {
   ],
   transform: {
   // Use babel-jest to transpile tests with the next/babel preset
-  // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
-    '\\.[jt]sx?$': 'ts-jest' // Typescript 를 사용할 경우
-    '\\.[j]sx?$': 'babel-jest' // javascript 만 사용할 경우
+    '^.+\\.[t|j]sx?$': 'babel-jest',
   },
   preset: 'ts-jest',
   transformIgnorePatterns: ['/node_modules/', '^.+\\.module\\.(css|sass|scss)$'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'] // 작성하는 모든 테스트 코드에 대해 jest 구성(jest.setup.js)을 로드한다.
 }
+```
+
+## babel.config.js
+```js
+module.exports = {
+  presets: [
+    // '@babel/preset-env'는 현재 환경을 기준으로 지원되는 JavaScript 문법 및 기능을 사용할 수 있는 코드로 변환합니다.
+    ['@babel/preset-env', { targets: { node: 'current' } }],
+    
+    // '@babel/preset-react'는 React 애플리케이션의 JSX 문법을 자바스크립트로 변환하는 데 사용됩니다.
+    '@babel/preset-react',
+    
+    // '@babel/preset-typescript'는 TypeScript 코드를 JavaScript 코드로 변환하는 데 사용됩니다.
+    '@babel/preset-typescript',
+  ],
+};
 ```

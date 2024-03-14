@@ -29,12 +29,9 @@ module.exports = {
   },
   moduleDirectories: ['node_modules'],
   transform: {
-    '^.+\\.(js|jsx)$': 'babel-jest',
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    // '^.+\\.(js|jsx)$': 'babel-jest', // javascript 만 사용할 경우
+    '^.+\\.[t|j]sx?$': 'babel-jest',
   },
   preset: 'ts-jest',
-  // transformIgnorePatterns: ['^.+\\.module\\.(css|sass|scss)$'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'], // 작성하는 모든 테스트 코드에 대해 jest 구성(jest.setup.js)을 로드한다.
 };

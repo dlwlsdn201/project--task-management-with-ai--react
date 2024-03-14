@@ -51,6 +51,9 @@ importers:
       '@babel/preset-env':
         specifier: ^7.24.0
         version: 7.24.0(@babel/core@7.24.0)
+      '@babel/preset-react':
+        specifier: ^7.23.3
+        version: 7.23.3(@babel/core@7.24.0)
       '@babel/preset-typescript':
         specifier: ^7.23.3
         version: 7.23.3(@babel/core@7.24.0)
@@ -1135,7 +1138,6 @@ packages:
     dependencies:
       '@babel/core': 7.24.0
       '@babel/helper-plugin-utils': 7.24.0
-    dev: false
 
   /@babel/plugin-transform-react-jsx-development@7.22.5(@babel/core@7.24.0):
     resolution: {integrity: sha512-bDhuzwWMuInwCYeDeMzyi7TaBgRQei6DqxhbyniL7/VG4RSS7HtSL2QbY4eESy1KJqlWt8g3xeEBGPuo+XqC8A==}
@@ -1145,7 +1147,6 @@ packages:
     dependencies:
       '@babel/core': 7.24.0
       '@babel/plugin-transform-react-jsx': 7.23.4(@babel/core@7.24.0)
-    dev: false
 
   /@babel/plugin-transform-react-jsx@7.23.4(@babel/core@7.24.0):
     resolution: {integrity: sha512-5xOpoPguCZCRbo/JeHlloSkTA8Bld1J/E1/kLfD1nsuiW1m8tduTA1ERCgIZokDflX/IBzKcqR3l7VlRgiIfHA==}
@@ -1159,7 +1160,6 @@ packages:
       '@babel/helper-plugin-utils': 7.24.0
       '@babel/plugin-syntax-jsx': 7.23.3(@babel/core@7.24.0)
       '@babel/types': 7.24.0
-    dev: false
 
   /@babel/plugin-transform-react-pure-annotations@7.23.3(@babel/core@7.24.0):
     resolution: {integrity: sha512-qMFdSS+TUhB7Q/3HVPnEdYJDQIk57jkntAwSuz9xfSE4n+3I+vHYCli3HoHawN1Z3RfCz/y1zXA/JXjG6cVImQ==}
@@ -1170,7 +1170,6 @@ packages:
       '@babel/core': 7.24.0
       '@babel/helper-annotate-as-pure': 7.22.5
       '@babel/helper-plugin-utils': 7.24.0
-    dev: false
 
   /@babel/plugin-transform-regenerator@7.23.3(@babel/core@7.24.0):
     resolution: {integrity: sha512-KP+75h0KghBMcVpuKisx3XTu9Ncut8Q8TuvGO4IhY+9D5DFEckQefOuIsB/gQ2tG71lCke4NMrtIPS8pOj18BQ==}
@@ -1418,7 +1417,6 @@ packages:
       '@babel/plugin-transform-react-jsx': 7.23.4(@babel/core@7.24.0)
       '@babel/plugin-transform-react-jsx-development': 7.22.5(@babel/core@7.24.0)
       '@babel/plugin-transform-react-pure-annotations': 7.23.3(@babel/core@7.24.0)
-    dev: false
 
   /@babel/preset-typescript@7.23.3(@babel/core@7.24.0):
     resolution: {integrity: sha512-17oIGVlqz6CchO9RFYn5U6ZpWRZIngayYCtrPRSgANSwC2V1Jb+iP74nVxzzXJte8b8BYxrL1yY96xfhTBrNNQ==}
