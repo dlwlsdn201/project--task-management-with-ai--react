@@ -6,6 +6,7 @@
     "@tanstack/react-query": "^5.25.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^13.5.0",
+    "pnpm": "^8.15.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
@@ -16,7 +17,7 @@
     "zustand": "^4.5.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "BROWSER=Arc react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
     "coverage": "jest --coverage",
@@ -24,12 +25,6 @@
     "client": "pnpm workspace client start",
     "client:build": "pnpm workspace client react-scripts build",
     "server": "pnpm workspace server start"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -55,11 +50,15 @@
     "@babel/preset-typescript": "^7.23.3",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.5.12",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
     "babel-jest": "^29.7.0",
     "daisyui": "^4.7.3",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-jest": "^27.9.0",
     "eslint-plugin-prettier": "^5.1.3",
     "jest-environment-jsdom": "^29.7.0",
