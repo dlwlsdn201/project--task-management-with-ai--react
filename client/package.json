@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "@tanstack/react-query": "^5.25.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^13.5.0",
@@ -17,14 +18,14 @@
     "zustand": "^4.5.2"
   },
   "scripts": {
-    "start": "BROWSER=Arc react-scripts start",
-    "build": "react-scripts build",
+    "start": "BROWSER=Arc craco start",
+    "build": "craco build",
     "test": "jest",
     "coverage": "jest --coverage",
     "eject": "react-scripts eject",
-    "client": "pnpm workspace client start",
-    "client:build": "pnpm workspace client react-scripts build",
-    "server": "pnpm workspace server start"
+    "client": "pnpm workspace client craco start",
+    "client:build": "pnpm workspace client craco build",
+    "server": "pnpm workspace server craco start"
   },
   "browserslist": {
     "production": [
@@ -42,14 +43,19 @@
     "client",
     "server"
   ],
+  "resolutions": {
+    "eslint-plugin-react": "1.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.24.0",
     "@babel/plugin-syntax-jsx": "^7.23.3",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
+    "@jest/globals": "^29.7.0",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.5.12",
+    "@types/styled-components": "^5.1.34",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "babel-jest": "^29.7.0",

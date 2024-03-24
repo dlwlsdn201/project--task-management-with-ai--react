@@ -26,7 +26,7 @@ module.exports = {
     project: ['./tsconfig.json'],
     tsconfigRootDir: __dirname,
   },
-  plugins: ['@typescript-eslint', 'react-hooks', 'jest', 'prettier'],
+  plugins: ['@typescript-eslint', 'react-hooks', 'import', 'jest', 'prettier'],
   overrides: [
     {
       files: ['__tests__/**/*'],
@@ -42,6 +42,11 @@ module.exports = {
       extends: ['plugin:@typescript-eslint/disable-type-checked'],
       files: ['./**/*.js'],
     },
+    {
+      // .ts, .tsx 에만 @typescript-eslint/recommended 플러그인 적용
+      files: ['*.ts', '*.tsx'],
+      extends: ['plugin:@typescript-eslint/recommended'],
+    },
   ],
   rules: {
     'no-var': 2, // var 사용시 오류
@@ -49,7 +54,7 @@ module.exports = {
     'no-unused-vars': 1, // 사용하지 않는 변수가 있을 때 발생하는 기본경고 비활성화
     '@typescript-eslint/no-unused-vars': 1, // 사용하지 않는 변수 또는 import에 대해 오류
     'global-require': 0, // require import 허용
-    'import/prefer-default-export': 2, // export문이 하나일 때 default 미사용 시 오류
+    'import/prefer-default-export': 1, // export문이 하나일 때 default 미사용 시 오류
     'no-extra-semi': 2, // 불필요한 세미콜론 사용 시 오류
     'react/jsx-filename-extension': [
       // jsx 파일 확장자 .jx, .jsx, .ts, .tsx 허용

@@ -1,25 +1,25 @@
 import React from 'react';
 
 const properties = {
-  name: 'password',
-  placeholder: '비밀번호 입력',
+  name: 'userId',
+  placeholder: '아이디 입력 (sample@gmail.com)',
 };
 
 interface Props {
-  updateInputPasswordValue: (value: string) => void;
+  updateInputUserIdValue: (args: string) => void;
 }
 
-const Password = ({ updateInputPasswordValue }: Props) => {
+const ID = ({ updateInputUserIdValue }: Props) => {
   return (
     <input
       id={properties.name}
       type='text'
       name={properties.name}
-      onChange={e => updateInputPasswordValue(e.target.value)}
       placeholder={properties.placeholder}
+      onChange={e => updateInputUserIdValue(e.target.value)}
       className='input input-bordered w-full max-w-xs'
     />
   );
 };
 
-export default Password;
+export default ID;
