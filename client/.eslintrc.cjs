@@ -12,8 +12,7 @@ module.exports = {
     // 'plugin:react/recommended',
     'plugin:jest/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-type-checked',
-    'plugin:import/recommended',
+    // 'plugin:import/recommended',
     'plugin:import/typescript',
     'prettier',
   ],
@@ -27,7 +26,7 @@ module.exports = {
     project: ['./tsconfig.json'],
     tsconfigRootDir: __dirname,
   },
-  plugins: ['@typescript-eslint', 'react', 'react-hooks', 'jest', 'prettier'],
+  plugins: ['@typescript-eslint', 'react-hooks', 'jest', 'prettier'],
   overrides: [
     {
       files: ['__tests__/**/*'],
@@ -37,6 +36,11 @@ module.exports = {
       env: {
         jest: true,
       },
+    },
+    {
+      // .js 형식의 환경설정 파일을 module.exports 혀옹 하기 위한 설정
+      extends: ['plugin:@typescript-eslint/disable-type-checked'],
+      files: ['./**/*.js'],
     },
   ],
   rules: {
