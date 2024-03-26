@@ -4,7 +4,7 @@ export const InnerWrapper = styled.div`
   min-width: 20rem;
   display: flex;
   flex-flow: column nowrap;
-  gap: 1rem;
+  gap: 2rem;
 `;
 
 export const RootWrapper = styled.div`

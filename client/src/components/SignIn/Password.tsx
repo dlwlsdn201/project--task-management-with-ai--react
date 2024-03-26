@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
 
 const properties = {
@@ -7,16 +8,20 @@ const properties = {
 
 interface Props {
   updateInputPasswordValue: (value: string) => void;
+  placeholder?: string;
 }
 
-const Password = ({ updateInputPasswordValue }: Props) => {
+const Password = ({
+  updateInputPasswordValue,
+  placeholder = undefined,
+}: Props) => {
   return (
     <input
       id={properties.name}
       type='text'
       name={properties.name}
       onChange={e => updateInputPasswordValue(e.target.value)}
-      placeholder={properties.placeholder}
+      placeholder={placeholder ?? properties.placeholder}
       className='input input-bordered w-full max-w-xs'
     />
   );

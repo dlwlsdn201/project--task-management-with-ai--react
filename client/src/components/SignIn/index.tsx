@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import Submit from '@components/common/Buttons/SubmitButton';
 import ID from './ID';
 import Password from './Password';
 import { InnerWrapper, RootWrapper } from './SignIn.styled';
-import Submit from './Submit';
 import SnsSignIn from './SNS';
 
 export const Title = (): JSX.Element => (
@@ -24,7 +24,7 @@ const SignIn = () => {
     setPassword(value);
   };
 
-  const checkValidInputId = (): boolean => {
+  const checkValidInputId = useCallback((): boolean => {
     if (
       userId &&
       userId.length > 6 &&
@@ -33,11 +33,12 @@ const SignIn = () => {
     )
       return true;
     return false;
-  };
-  const checkValidInputPassword = (): boolean => {
+  }, [userId]);
+
+  const checkValidInputPassword = useCallback((): boolean => {
     if (password && password.length >= 8) return true;
     return false;
-  };
+  }, [password]);
 
   useEffect(() => {
     if (checkValidInputId() && checkValidInputPassword()) {
@@ -46,6 +47,7 @@ const SignIn = () => {
       setIsValid(false);
     }
   }, [userId, password, checkValidInputId, checkValidInputPassword]);
+
   return (
     <RootWrapper>
       <section>
@@ -53,7 +55,7 @@ const SignIn = () => {
           <Title />
           <ID updateInputUserIdValue={updateInputUserIdValue} />
           <Password updateInputPasswordValue={updateInputPasswordValue} />
-          <Submit isValid={isValid} />
+          <Submit label='로그인' isValid={isValid} />
         </InnerWrapper>
       </section>
       <section>

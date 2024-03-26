@@ -2,7 +2,6 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { expect, test } from '@jest/globals';
 import SignIn from '.';
-// import App from '@src/App';
 
 describe('1. UI 요소 렌더링 테스트', () => {
   test('1.1 ID 입력 UI 렌더링', () => {
