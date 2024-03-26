@@ -79,6 +79,7 @@ module.exports = {
     '^.+\\.[t|j]sx?$': 'babel-jest',
   },
   preset: 'ts-jest',
+  verbose: true, // 테스트 시, 터널에 describe, test name 출력 여부
   transformIgnorePatterns: ['/node_modules/', '^.+\\.module\\.(css|sass|scss)$'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'] // 작성하는 모든 테스트 코드에 대해 jest 구성(jest.setup.js)을 로드한다.
